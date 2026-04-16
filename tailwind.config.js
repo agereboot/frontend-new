@@ -1,0 +1,112 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+    darkMode: ["class"],
+    content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+    "./public/index.html"
+  ],
+  theme: {
+        extend: {
+                borderRadius: {
+                        lg: 'var(--radius)',
+                        md: 'calc(var(--radius) - 2px)',
+                        sm: 'calc(var(--radius) - 4px)'
+                },
+                colors: {
+                        background: 'hsl(var(--background))',
+                        foreground: 'hsl(var(--foreground))',
+                        card: {
+                                DEFAULT: 'hsl(var(--card))',
+                                foreground: 'hsl(var(--card-foreground))'
+                        },
+                        popover: {
+                                DEFAULT: 'hsl(var(--popover))',
+                                foreground: 'hsl(var(--popover-foreground))'
+                        },
+                        primary: {
+                                DEFAULT: 'hsl(var(--primary))',
+                                foreground: 'hsl(var(--primary-foreground))'
+                        },
+                        secondary: {
+                                DEFAULT: 'hsl(var(--secondary))',
+                                foreground: 'hsl(var(--secondary-foreground))'
+                        },
+                        muted: {
+                                DEFAULT: 'hsl(var(--muted))',
+                                foreground: 'hsl(var(--muted-foreground))'
+                        },
+                        accent: {
+                                DEFAULT: 'hsl(var(--accent))',
+                                foreground: 'hsl(var(--accent-foreground))'
+                        },
+                        destructive: {
+                                DEFAULT: 'hsl(var(--destructive))',
+                                foreground: 'hsl(var(--destructive-foreground))'
+                        },
+                        border: 'hsl(var(--border))',
+                        input: 'hsl(var(--input))',
+                        ring: 'hsl(var(--ring))',
+                        chart: {
+                                '1': 'hsl(var(--chart-1))',
+                                '2': 'hsl(var(--chart-2))',
+                                '3': 'hsl(var(--chart-3))',
+                                '4': 'hsl(var(--chart-4))',
+                                '5': 'hsl(var(--chart-5))'
+                        },
+                        space: {
+                                DEFAULT: '#FFFFFF',
+                                light: '#F8FAFC',
+                                mid: '#EEF2F7',
+                        },
+                        cosmic: {
+                                DEFAULT: '#7B35D8',
+                                light: '#9B5FE8',
+                                dark: '#5B1FB8',
+                        },
+                        stellar: {
+                                DEFAULT: '#111827',
+                                dim: '#6B7280',
+                        },
+                        aurora: '#D97706',
+                        nebula: '#0F9F8F',
+                        photon: '#4F46E5',
+                },
+                // fontFamily: {
+                //         display: ['Exo 2', 'sans-serif'],
+                //         body: ['Plus Jakarta Sans', 'sans-serif'],
+                //         mono: ['JetBrains Mono', 'monospace'],
+                //         serif: ['Cormorant Garamond', 'serif'],
+                // },
+                keyframes: {
+                        'accordion-down': {
+                                from: { height: '0' },
+                                to: { height: 'var(--radix-accordion-content-height)' }
+                        },
+                        'accordion-up': {
+                                from: { height: 'var(--radix-accordion-content-height)' },
+                                to: { height: '0' }
+                        },
+                        'score-pulse': {
+                                '0%, 100%': { opacity: '1' },
+                                '50%': { opacity: '0.7' }
+                        },
+                        'slide-up': {
+                                from: { opacity: '0', transform: 'translateY(10px)' },
+                                to: { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        'glow': {
+                                '0%, 100%': { boxShadow: '0 0 20px -5px rgba(123, 53, 216, 0.4)' },
+                                '50%': { boxShadow: '0 0 30px -5px rgba(123, 53, 216, 0.6)' }
+                        },
+                },
+                animation: {
+                        'accordion-down': 'accordion-down 0.2s ease-out',
+                        'accordion-up': 'accordion-up 0.2s ease-out',
+                        'score-pulse': 'score-pulse 2s ease-in-out infinite',
+                        'slide-up': 'slide-up 0.4s ease-out',
+                        'glow': 'glow 3s ease-in-out infinite',
+                }
+        }
+  },
+  plugins: [require("tailwindcss-animate")],
+};
