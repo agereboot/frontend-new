@@ -302,7 +302,7 @@ const handlePost = async () => {
 
       const token = localStorage.getItem("agereboot_token");
       const res = await fetch(
-        `https://isochroous-unlidded-elvina.ngrok-free.dev/api/feed/upload-photo`,
+        `http://16.170.222.16/api/feed/upload-photo`,
         {
           method: "POST",
           headers: {

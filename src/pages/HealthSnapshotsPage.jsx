@@ -91,7 +91,7 @@ const handleUpload = async () => {
     const token = localStorage.getItem("agereboot_token");
 
     const res = await fetch(
-      `https://isochroous-unlidded-elvina.ngrok-free.dev/api/health-snapshots/upload?category=${uploadCat}&notes=${encodeURIComponent(uploadNotes)}`,
+      `http://16.170.222.16/api/health-snapshots/upload?category=${uploadCat}&notes=${encodeURIComponent(uploadNotes)}`,
       {
         method: "POST",
         headers: {
@@ -212,7 +212,8 @@ const handleUpload = async () => {
                 className="rounded-xl border border-white/5 bg-white/[0.02] overflow-hidden group hover:border-white/10 transition-all">
                 <div className="relative aspect-square">
                   <img
-                    src={`${api.defaults.baseURL}/health-snapshots/${snap.id}`}
+                     src={`${api.defaults.baseURL}/health-snapshots/photo/${snap.id}`}
+                    // src="file_url"
                     alt={snap.category}
                     className="w-full h-full object-cover select-none"
                     draggable="false"
