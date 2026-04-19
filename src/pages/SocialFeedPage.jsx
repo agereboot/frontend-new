@@ -302,7 +302,7 @@ const handlePost = async () => {
 
       const token = localStorage.getItem("agereboot_token");
       const res = await fetch(
-        `http://16.170.222.16/api/feed/upload-photo`,
+        `https://app.agereboot.life/api/feed/upload-photo`,
         {
           method: "POST",
           headers: {

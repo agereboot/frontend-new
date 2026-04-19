@@ -1,7 +1,7 @@
   import axios from "axios";
 
   // const API_BASE = `${process.env.REACT_APP_BACKEND_URL}/api`;
-  const API_BASE = `http://16.170.222.16/api`;
+  const API_BASE = `https://app.agereboot.life/api`;
  
   // API with token + JSON content type
   const api = axios.create({

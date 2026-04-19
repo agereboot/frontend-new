@@ -91,7 +91,7 @@ const handleUpload = async () => {
     const token = localStorage.getItem("agereboot_token");
 
     const res = await fetch(
-      `http://16.170.222.16/api/health-snapshots/upload?category=${uploadCat}&notes=${encodeURIComponent(uploadNotes)}`,
+      `https://app.agereboot.life/api/health-snapshots/upload?category=${uploadCat}&notes=${encodeURIComponent(uploadNotes)}`,
       {
         method: "POST",
         headers: {
